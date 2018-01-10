@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  
+  <title>Docker による Ruby on Rails の開発環境 | wusagi24 blog</title>
+  <meta name="author" content="にしうさぎ (nishi wusagi)">
+  
+  <meta name="description" content="[ Github: rails-dev-docker ]
+初めて Ruby on Rails を触る機会があったので、Docker で開発実行環境を立ててみました。
+基本的に自分で使うために、急ごしらえででっち上げたので汎用性はないです。
+DockerHub の Rails Image には非推奨的">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="description" content="[ Github: rails-dev-docker ] 初めて Ruby on Rails を触る機会があったので、Docker で開発実行環境を立ててみました。 基本的に自分で使うために、急ごしらえででっち上げたので汎用性はないです。 DockerHub の Rails Image には非推奨的なことが書いてあったので、Ruby の Image をベースに自前で Dockerfile 書いてま">
+<meta name="keywords" content="Rails,Docker,開発環境">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker による Ruby on Rails の開発環境">
+<meta property="og:url" content="https://wusagi24.github.io/2017/11/08/Ruby-on-Rails-dev-env-on-Docker/index.html">
+<meta property="og:site_name" content="wusagi24 blog">
+<meta property="og:description" content="[ Github: rails-dev-docker ] 初めて Ruby on Rails を触る機会があったので、Docker で開発実行環境を立ててみました。 基本的に自分で使うために、急ごしらえででっち上げたので汎用性はないです。 DockerHub の Rails Image には非推奨的なことが書いてあったので、Ruby の Image をベースに自前で Dockerfile 書いてま">
+<meta property="og:locale" content="ja">
+<meta property="og:updated_time" content="2018-01-10T10:42:24.934Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Docker による Ruby on Rails の開発環境">
+<meta name="twitter:description" content="[ Github: rails-dev-docker ] 初めて Ruby on Rails を触る機会があったので、Docker で開発実行環境を立ててみました。 基本的に自分で使うために、急ごしらえででっち上げたので汎用性はないです。 DockerHub の Rails Image には非推奨的なことが書いてあったので、Ruby の Image をベースに自前で Dockerfile 書いてま">
+<meta name="twitter:creator" content="@wusagi24">
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="wusagi24 blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
+  
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">wusagi24 blog</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-11-07T16:30:55.000Z"><a href="/2017/11/08/Ruby-on-Rails-dev-env-on-Docker/">2017-11-08</a></time>
+      
+      
+  
+    <h1 class="title">Docker による Ruby on Rails の開発環境</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>[ Github: <a href="https://github.com/wusagi24/rails-dev-docker" target="_blank" rel="noopener">rails-dev-docker</a> ]</p>
+<p>初めて Ruby on Rails を触る機会があったので、Docker で開発実行環境を立ててみました。</p>
+<p>基本的に自分で使うために、急ごしらえででっち上げたので汎用性はないです。</p>
+<p>DockerHub の Rails Image には非推奨的なことが書いてあったので、Ruby の Image をベースに自前で Dockerfile 書いてます。</p>
+<p>docker-compose を使ってるのは、MySQL や PostgreSQL を DB に利用する場合、別コンテナとして外出ししやすいようにです。（結局 SQLite3 使いましたが…<br>なにかと便利なので、最近何かしらの開発実行環境を Docker で立てるときには docker-compose 使うようにしてます。</p>
+<p>Rails に関しては改めて何か書くかもしれませんが、想像以上に “魔法” が強くて、正直今はよく分かんねーでございます。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/環境構築/">環境構築</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/Rails/">Rails</a>, <a href="/tags/Docker/">Docker</a>, <a href="/tags/開発環境/">開発環境</a>
+  </div>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="widget profile">
+  <h3 class="title">Profile</h3>
+  <div class="entry">
+    <dl class="author">
+      <dt>Author</dt><dd>にしうさぎ (nishi wusagi)</dd>
+    </dl>
+    <p class="author-bio">フロントエンド寄りの web アプリケーションエンジニア</p>
+    <ul class="social-list">
+      
+      
+        <li>
+          <a href="https://github.com/wusagi24" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github fa-2x"></i>
+          </a>
+        </li>
+      
+      
+        <li>
+          <a href="https://www.facebook.com/lapin.wuusan" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook fa-2x"></i>
+          </a>
+        </li>
+      
+      
+        <li>
+          <a href="https://twitter.com/wusagi24" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-twitter fa-2x"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Recent Posts</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2018/01/10/customized-blog-theme/">ブログテーマをいろいろ改変</a>
+      </li>
+    
+      <li>
+        <a href="/2017/11/08/Ruby-on-Rails-dev-env-on-Docker/">Docker による Ruby on Rails の開発環境</a>
+      </li>
+    
+      <li>
+        <a href="/2017/10/09/Github-Pages-を-Hexo-に置き換えてみた/">Github Pages を Hexo に置き換えてみた</a>
+      </li>
+    
+      <li>
+        <a href="/2016/08/22/react-tutorial-by-create-react-app/">CreateReactApp によるReactチュートリアルの写経</a>
+      </li>
+    
+      <li>
+        <a href="/2016/08/06/windows-package-management/">Windwos の PackageManagement を使ってみる</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Categories</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/Hexo/">Hexo</a><small>1</small></li>
+  
+    <li><a href="/categories/React/">React</a><small>1</small></li>
+  
+    <li><a href="/categories/etc/">etc</a><small>1</small></li>
+  
+    <li><a href="/categories/環境構築/">環境構築</a><small>1</small></li>
+  
+    <li><a href="/categories/開発環境/">開発環境</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/Docker/">Docker</a><small>1</small></li>
+  
+    <li><a href="/tags/Github-Pages/">Github Pages</a><small>1</small></li>
+  
+    <li><a href="/tags/Hexo/">Hexo</a><small>2</small></li>
+  
+    <li><a href="/tags/PackageManagement/">PackageManagement</a><small>1</small></li>
+  
+    <li><a href="/tags/PowerShell/">PowerShell</a><small>1</small></li>
+  
+    <li><a href="/tags/Rails/">Rails</a><small>1</small></li>
+  
+    <li><a href="/tags/React/">React</a><small>1</small></li>
+  
+    <li><a href="/tags/Windows/">Windows</a><small>1</small></li>
+  
+    <li><a href="/tags/blog/">blog</a><small>1</small></li>
+  
+    <li><a href="/tags/js/">js</a><small>1</small></li>
+  
+    <li><a href="/tags/写経/">写経</a><small>1</small></li>
+  
+    <li><a href="/tags/開発環境/">開発環境</a><small>2</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2018 にしうさぎ (nishi wusagi)
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>

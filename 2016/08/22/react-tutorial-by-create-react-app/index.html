@@ -1,0 +1,292 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  
+  <title>CreateReactApp によるReactチュートリアルの写経 | wusagi24 blog</title>
+  <meta name="author" content="にしうさぎ (nishi wusagi)">
+  
+  <meta name="description" content="今回のゴールReactのチュートリアルを、CreateReactApp による開発環境で写経する。
+ソースこちらの記事の内容を実際に書いたソースは こちら になります。
+基本的に、チュートリアルに登場するソースごとに、 commit を入れてあります。
+はじめにReactのチュートリアルを、最近公開">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="description" content="今回のゴールReactのチュートリアルを、CreateReactApp による開発環境で写経する。 ソースこちらの記事の内容を実際に書いたソースは こちら になります。 基本的に、チュートリアルに登場するソースごとに、 commit を入れてあります。 はじめにReactのチュートリアルを、最近公開された 「Create React App」 というReactプロジェクトのスターターコマンドを利用">
+<meta name="keywords" content="js,React,写経">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CreateReactApp によるReactチュートリアルの写経">
+<meta property="og:url" content="https://wusagi24.github.io/2016/08/22/react-tutorial-by-create-react-app/index.html">
+<meta property="og:site_name" content="wusagi24 blog">
+<meta property="og:description" content="今回のゴールReactのチュートリアルを、CreateReactApp による開発環境で写経する。 ソースこちらの記事の内容を実際に書いたソースは こちら になります。 基本的に、チュートリアルに登場するソースごとに、 commit を入れてあります。 はじめにReactのチュートリアルを、最近公開された 「Create React App」 というReactプロジェクトのスターターコマンドを利用">
+<meta property="og:locale" content="ja">
+<meta property="og:updated_time" content="2018-01-10T10:38:52.538Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CreateReactApp によるReactチュートリアルの写経">
+<meta name="twitter:description" content="今回のゴールReactのチュートリアルを、CreateReactApp による開発環境で写経する。 ソースこちらの記事の内容を実際に書いたソースは こちら になります。 基本的に、チュートリアルに登場するソースごとに、 commit を入れてあります。 はじめにReactのチュートリアルを、最近公開された 「Create React App」 というReactプロジェクトのスターターコマンドを利用">
+<meta name="twitter:creator" content="@wusagi24">
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="wusagi24 blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
+  
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">wusagi24 blog</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2016-08-21T15:00:00.000Z"><a href="/2016/08/22/react-tutorial-by-create-react-app/">2016-08-22</a></time>
+      
+      
+  
+    <h1 class="title">CreateReactApp によるReactチュートリアルの写経</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h2 id="今回のゴール"><a href="#今回のゴール" class="headerlink" title="今回のゴール"></a>今回のゴール</h2><p>Reactのチュートリアルを、CreateReactApp による開発環境で写経する。</p>
+<h2 id="ソース"><a href="#ソース" class="headerlink" title="ソース"></a>ソース</h2><p>こちらの記事の内容を実際に書いたソースは <a href="https://github.com/wusagi24/react-tutorial_by_create-react-app" target="_blank" rel="noopener">こちら</a> になります。</p>
+<p>基本的に、チュートリアルに登場するソースごとに、 commit を入れてあります。</p>
+<h2 id="はじめに"><a href="#はじめに" class="headerlink" title="はじめに"></a>はじめに</h2><p><a href="https://facebook.github.io/react/docs/tutorial-ja-JP.html" target="_blank" rel="noopener">Reactのチュートリアル</a>を、最近公開された 「<a href="https://facebook.github.io/react/blog/2016/07/22/create-apps-with-no-configuration.html" target="_blank" rel="noopener">Create React App</a>」 というReactプロジェクトのスターターコマンドを利用した開発環境（+ ES2015の書き方）で写経しました。</p>
+<p>この場合、写経というより書き換えなんでしょうか。</p>
+<p>ということで、基本的に写経なので、 <a href="https://facebook.github.io/react/docs/tutorial-ja-JP.html" target="_blank" rel="noopener">チュートリアルのサイト</a> と <a href="https://github.com/wusagi24/react-tutorial_by_create-react-app/commits/master" target="_blank" rel="noopener">前項のコミットログ</a> を突き合わせて読めば比較的後からでも追いやすいかなと思うのですが、一部補足的にちょっと書き留めておきます。</p>
+<h2 id="プロジェクトの作成"><a href="#プロジェクトの作成" class="headerlink" title="プロジェクトの作成"></a>プロジェクトの作成</h2><p>CreateReactApp インストールして、プロジェクトのひな形を作って、サンプル用のファイルを削除する。</p>
+<h3 id="create-react-app-コマンドのインストール"><a href="#create-react-app-コマンドのインストール" class="headerlink" title="create-react-app コマンドのインストール"></a>create-react-app コマンドのインストール</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g create-react-app</span><br></pre></td></tr></table></figure>
+<h3 id="create-react-app-コマンドでプロジェクトを作成"><a href="#create-react-app-コマンドでプロジェクトを作成" class="headerlink" title="create-react-app コマンドでプロジェクトを作成"></a>create-react-app コマンドでプロジェクトを作成</h3><p>コミット 「<a href="https://github.com/wusagi24/react-tutorial_by_create-react-app/commit/f8564c426ddfbcef50b7ba46f8674b68c78515c0" target="_blank" rel="noopener">create project</a>」</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ create-react-app react_tutorial</span><br><span class="line">$ <span class="built_in">cd</span> react_tutorial</span><br></pre></td></tr></table></figure>
+<h3 id="サンプルのファイルを削除"><a href="#サンプルのファイルを削除" class="headerlink" title="サンプルのファイルを削除"></a>サンプルのファイルを削除</h3><p>コミット 「<a href="https://github.com/wusagi24/react-tutorial_by_create-react-app/commit/7a0090ce505dad9e506d90e01af9a61d43b4a672" target="_blank" rel="noopener">remove default source file</a>」</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ rm src/*</span><br></pre></td></tr></table></figure>
+<h2 id="index-html"><a href="#index-html" class="headerlink" title="index.html"></a>index.html</h2><p>コミット 「<a href="https://github.com/wusagi24/react-tutorial_by_create-react-app/commit/282cc33a420186e0ae6e67d16257e0de9ec7f677" target="_blank" rel="noopener">modify index.html</a>」</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- index.html --&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>React Tutorial by create-react-app<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"content"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>index.html を、チュートリアルで出てくるものを元にした上記内容に書き換え。</p>
+<p>チュートリアルでは jsパッケージの取得を CDN から、依存関係の解消を html上のタグの記述順 で行っていますが、CreateReactAppでは <a href="http://webpack.github.io/" target="_blank" rel="noopener">webpack</a> が入っているので、今回はパッケージの取得を npm で、依存関係の解消を webpack で行うことにします。</p>
+<p>というわけで、jsの読み込み部分はチュートリアル記載のものからばっさりカット！</p>
+<p>あと、チュートリアルではjsをhtml内に記述していますが、さすがに面倒くさいので別ファイル ( <code>src/index.js</code> ) に切り出しています。</p>
+<p>この環境では、index.html 内に scriptタグ を記述しなくても、ビルド時に自動的に <code>src/index.js</code> を読み込むタグが挿入されます。</p>
+<h2 id="jsファイルについて"><a href="#jsファイルについて" class="headerlink" title="jsファイルについて"></a>jsファイルについて</h2><p>コミット 「<a href="https://github.com/wusagi24/react-tutorial_by_create-react-app/commit/ccf8e3011d3799d6eeab06696b5de07e95f71f53" target="_blank" rel="noopener">tutorial1.js</a>」</p>
+<p>webpack による依存性解決と ES2015 の class 記法を使用するので、js ファイルをコンポーネントごとに切り分けて作成、import/export にて組み合わせています。</p>
+<p>エントリーポイントとなる <code>src/index.js</code> で ReactDOM でのレンダリングを行い、そこでルートコンポーネント（今回は <code>CommentBox</code> ）を import しています。</p>
+<h2 id="ライブラリの使用"><a href="#ライブラリの使用" class="headerlink" title="ライブラリの使用"></a>ライブラリの使用</h2><p>コミット 「<a href="https://github.com/wusagi24/react-tutorial_by_create-react-app/commit/124d56fff12dcc808c1021008bf7bdca5bb870ca" target="_blank" rel="noopener">add library ‘remarkable’</a>」</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -S remarkable</span><br></pre></td></tr></table></figure>
+<p>コミット 「<a href="https://github.com/wusagi24/react-tutorial_by_create-react-app/commit/c0d0ac182a403f8a701798cb65530ec5116f8a76" target="_blank" rel="noopener">tutorial6.js</a>」</p>
+<p>npm でライブラリをダウンロードしてきて、使用する jsファイル 内で import で読み込んでいます。</p>
+<h2 id="APIサーバ"><a href="#APIサーバ" class="headerlink" title="APIサーバ"></a>APIサーバ</h2><p>ソースの README にも記載しましたが、<a href="https://github.com/reactjs/react-tutorial" target="_blank" rel="noopener">チュートリアルで用意されているAPIサーバプログラム</a>を、そのまま同一ドメインのAPIとして利用するのはこの環境だとちょっと面倒くさいので、別ドメインのAPIとして動かしてアクセスすることにしました。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/reactjs/react-tutorial.git react-tutorial-server</span><br><span class="line">$ <span class="built_in">cd</span> react-tutorial-server</span><br><span class="line">$ npm install</span><br><span class="line">$ PORT=3001 node server.js</span><br></pre></td></tr></table></figure>
+<p>コミット 「<a href="https://github.com/wusagi24/react-tutorial_by_create-react-app/commit/ef1010a0328299a36f548e13cd04bcbbce60897b" target="_blank" rel="noopener">modify comments api url</a>」</p>
+<p>幸いこのチュートリアル用APIサーバプログラムは CORS 対応されているので、丸っとサンプルソース持ってきて、別ポートでサーバを起動。APIへのアクセスアドレスをそちらに向けてあげるだけで大丈夫です。</p>
+<h2 id="アロー関数の利用"><a href="#アロー関数の利用" class="headerlink" title="アロー関数の利用"></a>アロー関数の利用</h2><p>コミット 「<a href="https://github.com/wusagi24/react-tutorial_by_create-react-app/commit/3b4c971cb9d55e034a664387d996f57dc33fee71" target="_blank" rel="noopener">tutorial13.js</a>」</p>
+<p>チュートリアルだと、 <code>$.ajax</code> 内のコールバック関数を <code>bind()</code> していますが、</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> (<span class="params">arg</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// code</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>でなく、</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(arg) =&gt; &#123;</span><br><span class="line">    <span class="comment">// code</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>と、ES2015 のアロー関数を使うと、自動的に this がバインドされるのでそっちで書いてます。</p>
+<p>あとついでに、コールバックの設定を Deferred の <code>done</code> <code>fail</code> で外に出す書き方に変えてます。</p>
+<h2 id="class内メソッドの非同期呼び出し"><a href="#class内メソッドの非同期呼び出し" class="headerlink" title="class内メソッドの非同期呼び出し"></a>class内メソッドの非同期呼び出し</h2><p>コミット 「<a href="https://github.com/wusagi24/react-tutorial_by_create-react-app/commit/087ac2a4ce58a2bfe991937f7c0f8bc106f401f8" target="_blank" rel="noopener">tutorial16.js</a>」</p>
+<p>class 記法を利用する際、onClickイベントなんかでクラス内メソッドを設定する場合、そのまま</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">onChange=&#123;<span class="keyword">this</span>.handleAuthorChange&#125;</span><br></pre></td></tr></table></figure>
+<p>とかやると、対象メソッド内で js名物の <strong>this</strong> 迷子になるので、</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">onChange=&#123;<span class="keyword">this</span>.handleAuthorChange.bind(<span class="keyword">this</span>)&#125;</span><br></pre></td></tr></table></figure>
+<p>と、 this を <code>bind()</code> しています。</p>
+<h2 id="おわりに"><a href="#おわりに" class="headerlink" title="おわりに"></a>おわりに</h2><p>CreateReactApp は、ほんと素早く React 開発始められるし、開発・ビルドまわりで必要なものは最低限そろってるし、React 入門にはもってこいだと思います。</p>
+<h2 id="参考URL"><a href="#参考URL" class="headerlink" title="参考URL"></a>参考URL</h2><ul>
+<li><a href="https://facebook.github.io/react/docs/tutorial-ja-JP.html" target="_blank" rel="noopener">チュートリアル - React</a></li>
+<li><a href="https://github.com/facebookincubator/create-react-app" target="_blank" rel="noopener">Create React App - github</a></li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/React/">React</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/js/">js</a>, <a href="/tags/React/">React</a>, <a href="/tags/写経/">写経</a>
+  </div>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="widget profile">
+  <h3 class="title">Profile</h3>
+  <div class="entry">
+    <dl class="author">
+      <dt>Author</dt><dd>にしうさぎ (nishi wusagi)</dd>
+    </dl>
+    <p class="author-bio">フロントエンド寄りの web アプリケーションエンジニア</p>
+    <ul class="social-list">
+      
+      
+        <li>
+          <a href="https://github.com/wusagi24" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github fa-2x"></i>
+          </a>
+        </li>
+      
+      
+        <li>
+          <a href="https://www.facebook.com/lapin.wuusan" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook fa-2x"></i>
+          </a>
+        </li>
+      
+      
+        <li>
+          <a href="https://twitter.com/wusagi24" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-twitter fa-2x"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Recent Posts</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2018/01/10/customized-blog-theme/">ブログテーマをいろいろ改変</a>
+      </li>
+    
+      <li>
+        <a href="/2017/11/08/Ruby-on-Rails-dev-env-on-Docker/">Docker による Ruby on Rails の開発環境</a>
+      </li>
+    
+      <li>
+        <a href="/2017/10/09/Github-Pages-を-Hexo-に置き換えてみた/">Github Pages を Hexo に置き換えてみた</a>
+      </li>
+    
+      <li>
+        <a href="/2016/08/22/react-tutorial-by-create-react-app/">CreateReactApp によるReactチュートリアルの写経</a>
+      </li>
+    
+      <li>
+        <a href="/2016/08/06/windows-package-management/">Windwos の PackageManagement を使ってみる</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Categories</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/Hexo/">Hexo</a><small>1</small></li>
+  
+    <li><a href="/categories/React/">React</a><small>1</small></li>
+  
+    <li><a href="/categories/etc/">etc</a><small>1</small></li>
+  
+    <li><a href="/categories/環境構築/">環境構築</a><small>1</small></li>
+  
+    <li><a href="/categories/開発環境/">開発環境</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/Docker/">Docker</a><small>1</small></li>
+  
+    <li><a href="/tags/Github-Pages/">Github Pages</a><small>1</small></li>
+  
+    <li><a href="/tags/Hexo/">Hexo</a><small>2</small></li>
+  
+    <li><a href="/tags/PackageManagement/">PackageManagement</a><small>1</small></li>
+  
+    <li><a href="/tags/PowerShell/">PowerShell</a><small>1</small></li>
+  
+    <li><a href="/tags/Rails/">Rails</a><small>1</small></li>
+  
+    <li><a href="/tags/React/">React</a><small>1</small></li>
+  
+    <li><a href="/tags/Windows/">Windows</a><small>1</small></li>
+  
+    <li><a href="/tags/blog/">blog</a><small>1</small></li>
+  
+    <li><a href="/tags/js/">js</a><small>1</small></li>
+  
+    <li><a href="/tags/写経/">写経</a><small>1</small></li>
+  
+    <li><a href="/tags/開発環境/">開発環境</a><small>2</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2018 にしうさぎ (nishi wusagi)
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>

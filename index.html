@@ -1,0 +1,482 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  
+  <title>wusagi24 blog</title>
+  <meta name="author" content="にしうさぎ (nishi wusagi)">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta property="og:type" content="website">
+<meta property="og:title" content="wusagi24 blog">
+<meta property="og:url" content="https://wusagi24.github.io/index.html">
+<meta property="og:site_name" content="wusagi24 blog">
+<meta property="og:locale" content="ja">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="wusagi24 blog">
+<meta name="twitter:creator" content="@wusagi24">
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="wusagi24 blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
+  
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">wusagi24 blog</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-01-10T10:09:00.000Z"><a href="/2018/01/10/customized-blog-theme/">2018-01-10</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2018/01/10/customized-blog-theme/">ブログテーマをいろいろ改変</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>このブログのテーマは元々 <a href="https://github.com/hexojs/hexo-theme-light" target="_blank" rel="noopener">light</a> というものを利用しているんですが、個人的に気になる部分に少し手を入れてみました。</p>
+<h3 id="サイドバー（右カラム）"><a href="#サイドバー（右カラム）" class="headerlink" title="サイドバー（右カラム）"></a>サイドバー（右カラム）</h3><ul>
+<li>最近の投稿表示を有効化（テーマに元からある機能）</li>
+<li>プロフィール欄を追加</li>
+</ul>
+<h3 id="OGP-周り"><a href="#OGP-周り" class="headerlink" title="OGP 周り"></a>OGP 周り</h3><ul>
+<li>もろもろ調整</li>
+</ul>
+<p>今後も気になったら、適時調整を入れていくつもり。</p>
+<p>あと、jekyll を使ってたころに書いた記事を２点ほどサルベージしてきて追加してみました。<br>古い記事ですし、現在でも情報が有用かの検証は特にしてないので、意味があるかは微妙ですが、まぁ賑やかしということで。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-11-07T16:30:55.000Z"><a href="/2017/11/08/Ruby-on-Rails-dev-env-on-Docker/">2017-11-08</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2017/11/08/Ruby-on-Rails-dev-env-on-Docker/">Docker による Ruby on Rails の開発環境</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>[ Github: <a href="https://github.com/wusagi24/rails-dev-docker" target="_blank" rel="noopener">rails-dev-docker</a> ]</p>
+<p>初めて Ruby on Rails を触る機会があったので、Docker で開発実行環境を立ててみました。</p>
+<p>基本的に自分で使うために、急ごしらえででっち上げたので汎用性はないです。</p>
+<p>DockerHub の Rails Image には非推奨的なことが書いてあったので、Ruby の Image をベースに自前で Dockerfile 書いてます。</p>
+<p>docker-compose を使ってるのは、MySQL や PostgreSQL を DB に利用する場合、別コンテナとして外出ししやすいようにです。（結局 SQLite3 使いましたが…<br>なにかと便利なので、最近何かしらの開発実行環境を Docker で立てるときには docker-compose 使うようにしてます。</p>
+<p>Rails に関しては改めて何か書くかもしれませんが、想像以上に “魔法” が強くて、正直今はよく分かんねーでございます。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-10-08T22:54:19.000Z"><a href="/2017/10/09/Github-Pages-を-Hexo-に置き換えてみた/">2017-10-09</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2017/10/09/Github-Pages-を-Hexo-に置き換えてみた/">Github Pages を Hexo に置き換えてみた</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>アカウントの Github Pages （ <a href="https://wusagi24.github.io/">https://wusagi24.github.io/</a> ）を復活。併せてジェネレータを <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> に置き換えました。</p>
+<p>Hexo にした理由としては、最近開発環境を極力 node (npm) で完結させているので、 node 製のジェネレータの中で一番メジャーっぽい Hexo を選んだって感じです。</p>
+<p>また何か技術的なことで纏めておきたいことが出てきたら、ここに書いていこうと思います。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2016-08-21T15:00:00.000Z"><a href="/2016/08/22/react-tutorial-by-create-react-app/">2016-08-22</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2016/08/22/react-tutorial-by-create-react-app/">CreateReactApp によるReactチュートリアルの写経</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h2 id="今回のゴール"><a href="#今回のゴール" class="headerlink" title="今回のゴール"></a>今回のゴール</h2><p>Reactのチュートリアルを、CreateReactApp による開発環境で写経する。</p>
+<h2 id="ソース"><a href="#ソース" class="headerlink" title="ソース"></a>ソース</h2><p>こちらの記事の内容を実際に書いたソースは <a href="https://github.com/wusagi24/react-tutorial_by_create-react-app" target="_blank" rel="noopener">こちら</a> になります。</p>
+<p>基本的に、チュートリアルに登場するソースごとに、 commit を入れてあります。</p>
+<h2 id="はじめに"><a href="#はじめに" class="headerlink" title="はじめに"></a>はじめに</h2><p><a href="https://facebook.github.io/react/docs/tutorial-ja-JP.html" target="_blank" rel="noopener">Reactのチュートリアル</a>を、最近公開された 「<a href="https://facebook.github.io/react/blog/2016/07/22/create-apps-with-no-configuration.html" target="_blank" rel="noopener">Create React App</a>」 というReactプロジェクトのスターターコマンドを利用した開発環境（+ ES2015の書き方）で写経しました。</p>
+<p>この場合、写経というより書き換えなんでしょうか。</p>
+<p>ということで、基本的に写経なので、 <a href="https://facebook.github.io/react/docs/tutorial-ja-JP.html" target="_blank" rel="noopener">チュートリアルのサイト</a> と <a href="https://github.com/wusagi24/react-tutorial_by_create-react-app/commits/master" target="_blank" rel="noopener">前項のコミットログ</a> を突き合わせて読めば比較的後からでも追いやすいかなと思うのですが、一部補足的にちょっと書き留めておきます。</p>
+<h2 id="プロジェクトの作成"><a href="#プロジェクトの作成" class="headerlink" title="プロジェクトの作成"></a>プロジェクトの作成</h2><p>CreateReactApp インストールして、プロジェクトのひな形を作って、サンプル用のファイルを削除する。</p>
+<h3 id="create-react-app-コマンドのインストール"><a href="#create-react-app-コマンドのインストール" class="headerlink" title="create-react-app コマンドのインストール"></a>create-react-app コマンドのインストール</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g create-react-app</span><br></pre></td></tr></table></figure>
+<h3 id="create-react-app-コマンドでプロジェクトを作成"><a href="#create-react-app-コマンドでプロジェクトを作成" class="headerlink" title="create-react-app コマンドでプロジェクトを作成"></a>create-react-app コマンドでプロジェクトを作成</h3><p>コミット 「<a href="https://github.com/wusagi24/react-tutorial_by_create-react-app/commit/f8564c426ddfbcef50b7ba46f8674b68c78515c0" target="_blank" rel="noopener">create project</a>」</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ create-react-app react_tutorial</span><br><span class="line">$ <span class="built_in">cd</span> react_tutorial</span><br></pre></td></tr></table></figure>
+<h3 id="サンプルのファイルを削除"><a href="#サンプルのファイルを削除" class="headerlink" title="サンプルのファイルを削除"></a>サンプルのファイルを削除</h3><p>コミット 「<a href="https://github.com/wusagi24/react-tutorial_by_create-react-app/commit/7a0090ce505dad9e506d90e01af9a61d43b4a672" target="_blank" rel="noopener">remove default source file</a>」</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ rm src/*</span><br></pre></td></tr></table></figure>
+<h2 id="index-html"><a href="#index-html" class="headerlink" title="index.html"></a>index.html</h2><p>コミット 「<a href="https://github.com/wusagi24/react-tutorial_by_create-react-app/commit/282cc33a420186e0ae6e67d16257e0de9ec7f677" target="_blank" rel="noopener">modify index.html</a>」</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- index.html --&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>React Tutorial by create-react-app<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"content"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>index.html を、チュートリアルで出てくるものを元にした上記内容に書き換え。</p>
+<p>チュートリアルでは jsパッケージの取得を CDN から、依存関係の解消を html上のタグの記述順 で行っていますが、CreateReactAppでは <a href="http://webpack.github.io/" target="_blank" rel="noopener">webpack</a> が入っているので、今回はパッケージの取得を npm で、依存関係の解消を webpack で行うことにします。</p>
+<p>というわけで、jsの読み込み部分はチュートリアル記載のものからばっさりカット！</p>
+<p>あと、チュートリアルではjsをhtml内に記述していますが、さすがに面倒くさいので別ファイル ( <code>src/index.js</code> ) に切り出しています。</p>
+<p>この環境では、index.html 内に scriptタグ を記述しなくても、ビルド時に自動的に <code>src/index.js</code> を読み込むタグが挿入されます。</p>
+<h2 id="jsファイルについて"><a href="#jsファイルについて" class="headerlink" title="jsファイルについて"></a>jsファイルについて</h2><p>コミット 「<a href="https://github.com/wusagi24/react-tutorial_by_create-react-app/commit/ccf8e3011d3799d6eeab06696b5de07e95f71f53" target="_blank" rel="noopener">tutorial1.js</a>」</p>
+<p>webpack による依存性解決と ES2015 の class 記法を使用するので、js ファイルをコンポーネントごとに切り分けて作成、import/export にて組み合わせています。</p>
+<p>エントリーポイントとなる <code>src/index.js</code> で ReactDOM でのレンダリングを行い、そこでルートコンポーネント（今回は <code>CommentBox</code> ）を import しています。</p>
+<h2 id="ライブラリの使用"><a href="#ライブラリの使用" class="headerlink" title="ライブラリの使用"></a>ライブラリの使用</h2><p>コミット 「<a href="https://github.com/wusagi24/react-tutorial_by_create-react-app/commit/124d56fff12dcc808c1021008bf7bdca5bb870ca" target="_blank" rel="noopener">add library ‘remarkable’</a>」</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -S remarkable</span><br></pre></td></tr></table></figure>
+<p>コミット 「<a href="https://github.com/wusagi24/react-tutorial_by_create-react-app/commit/c0d0ac182a403f8a701798cb65530ec5116f8a76" target="_blank" rel="noopener">tutorial6.js</a>」</p>
+<p>npm でライブラリをダウンロードしてきて、使用する jsファイル 内で import で読み込んでいます。</p>
+<h2 id="APIサーバ"><a href="#APIサーバ" class="headerlink" title="APIサーバ"></a>APIサーバ</h2><p>ソースの README にも記載しましたが、<a href="https://github.com/reactjs/react-tutorial" target="_blank" rel="noopener">チュートリアルで用意されているAPIサーバプログラム</a>を、そのまま同一ドメインのAPIとして利用するのはこの環境だとちょっと面倒くさいので、別ドメインのAPIとして動かしてアクセスすることにしました。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/reactjs/react-tutorial.git react-tutorial-server</span><br><span class="line">$ <span class="built_in">cd</span> react-tutorial-server</span><br><span class="line">$ npm install</span><br><span class="line">$ PORT=3001 node server.js</span><br></pre></td></tr></table></figure>
+<p>コミット 「<a href="https://github.com/wusagi24/react-tutorial_by_create-react-app/commit/ef1010a0328299a36f548e13cd04bcbbce60897b" target="_blank" rel="noopener">modify comments api url</a>」</p>
+<p>幸いこのチュートリアル用APIサーバプログラムは CORS 対応されているので、丸っとサンプルソース持ってきて、別ポートでサーバを起動。APIへのアクセスアドレスをそちらに向けてあげるだけで大丈夫です。</p>
+<h2 id="アロー関数の利用"><a href="#アロー関数の利用" class="headerlink" title="アロー関数の利用"></a>アロー関数の利用</h2><p>コミット 「<a href="https://github.com/wusagi24/react-tutorial_by_create-react-app/commit/3b4c971cb9d55e034a664387d996f57dc33fee71" target="_blank" rel="noopener">tutorial13.js</a>」</p>
+<p>チュートリアルだと、 <code>$.ajax</code> 内のコールバック関数を <code>bind()</code> していますが、</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> (<span class="params">arg</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// code</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>でなく、</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(arg) =&gt; &#123;</span><br><span class="line">    <span class="comment">// code</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>と、ES2015 のアロー関数を使うと、自動的に this がバインドされるのでそっちで書いてます。</p>
+<p>あとついでに、コールバックの設定を Deferred の <code>done</code> <code>fail</code> で外に出す書き方に変えてます。</p>
+<h2 id="class内メソッドの非同期呼び出し"><a href="#class内メソッドの非同期呼び出し" class="headerlink" title="class内メソッドの非同期呼び出し"></a>class内メソッドの非同期呼び出し</h2><p>コミット 「<a href="https://github.com/wusagi24/react-tutorial_by_create-react-app/commit/087ac2a4ce58a2bfe991937f7c0f8bc106f401f8" target="_blank" rel="noopener">tutorial16.js</a>」</p>
+<p>class 記法を利用する際、onClickイベントなんかでクラス内メソッドを設定する場合、そのまま</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">onChange=&#123;<span class="keyword">this</span>.handleAuthorChange&#125;</span><br></pre></td></tr></table></figure>
+<p>とかやると、対象メソッド内で js名物の <strong>this</strong> 迷子になるので、</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">onChange=&#123;<span class="keyword">this</span>.handleAuthorChange.bind(<span class="keyword">this</span>)&#125;</span><br></pre></td></tr></table></figure>
+<p>と、 this を <code>bind()</code> しています。</p>
+<h2 id="おわりに"><a href="#おわりに" class="headerlink" title="おわりに"></a>おわりに</h2><p>CreateReactApp は、ほんと素早く React 開発始められるし、開発・ビルドまわりで必要なものは最低限そろってるし、React 入門にはもってこいだと思います。</p>
+<h2 id="参考URL"><a href="#参考URL" class="headerlink" title="参考URL"></a>参考URL</h2><ul>
+<li><a href="https://facebook.github.io/react/docs/tutorial-ja-JP.html" target="_blank" rel="noopener">チュートリアル - React</a></li>
+<li><a href="https://github.com/facebookincubator/create-react-app" target="_blank" rel="noopener">Create React App - github</a></li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2016-08-05T15:00:00.000Z"><a href="/2016/08/06/windows-package-management/">2016-08-06</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2016/08/06/windows-package-management/">Windwos の PackageManagement を使ってみる</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h2 id="今回のゴール"><a href="#今回のゴール" class="headerlink" title="今回のゴール"></a>今回のゴール</h2><p>PowerShell の PackageManagement を使って、パッケージ管理できるようにする。</p>
+<h2 id="はじめに"><a href="#はじめに" class="headerlink" title="はじめに"></a>はじめに</h2><p>Windows 10 からは、<em>PowerShell</em> のモジュールとして <strong>PackageManagement</strong> という <em>パッケージ管理システム</em> がデフォルトで入っているらしい。</p>
+<p>ちょうどクリーンインストールしたところだし、それを使って環境構築してみることにする。</p>
+<p>ちなみに、win10 より前のバージョンでも、 <code>Windows Management Framework 5.0</code> とやらを入れれば利用できるようです。</p>
+<p>（この記事内では、PowerShell のコマンドを記載するとき可読性のため大文字小文字書きわけてますが、PowerShell 自体は大文字小文字区別しないので、実際に打つ際は全部小文字でも問題ありません。）</p>
+<h2 id="手順"><a href="#手順" class="headerlink" title="手順"></a>手順</h2><ul>
+<li><p>PowerShellの設定</p>
+</li>
+<li><p>PackageProviderの追加・確認</p>
+</li>
+<li><p>パッケージ（アプリケーション） の検索・追加・確認・削除</p>
+</li>
+</ul>
+<h2 id="PowerShellの設定"><a href="#PowerShellの設定" class="headerlink" title="PowerShellの設定"></a>PowerShellの設定</h2><p>PowerShellのスクリプト実行に関するポリシーを変更する。</p>
+<p>PowerShell を <strong>管理者として実行する</strong> で起動。</p>
+<h3 id="現在の設定を確認"><a href="#現在の設定を確認" class="headerlink" title="現在の設定を確認"></a>現在の設定を確認</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="built_in">Get-ExecutionPolicy</span></span><br></pre></td></tr></table></figure>
+<p>初期値は <code>Restricted</code> （全てのスクリプト実行禁止） になっている。</p>
+<h3 id="設定を変更"><a href="#設定を変更" class="headerlink" title="設定を変更"></a>設定を変更</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="built_in">Set-ExecutionPolicy</span> RemoteSigned</span><br></pre></td></tr></table></figure>
+<p>ポリシーを <code>RemoteSigned</code> （署名付きのスクリプトとローカルに保存されているスクリプトの実行を許可）へ変更する。</p>
+<p>ポリシーの意味やその他の設定値に関しては、下記参考サイトなど詳しく書いてある。</p>
+<p>参考: <a href="http://www.atmarkit.co.jp/ait/articles/0805/16/news139.html" target="_blank" rel="noopener">WindowsでPowerShellスクリプトの実行セキュリティポリシーを変更する - @IT</a></p>
+<h2 id="PackageProviderの追加・確認"><a href="#PackageProviderの追加・確認" class="headerlink" title="PackageProviderの追加・確認"></a>PackageProviderの追加・確認</h2><p>PackageManagement では、パッケージの配布元を PackageProvider という形で管理して、そこ経由でパッケージを取得してくる。</p>
+<p>で、この PackageProvider として、Windowsのパッケージ管理システムとして定番の <strong>Chocolatey</strong> が利用できる。</p>
+<p>なので、とりあえず Chocolatey を PackageProvider として追加する。</p>
+<h3 id="利用できる（未登録の）-PackageProvider-一覧"><a href="#利用できる（未登録の）-PackageProvider-一覧" class="headerlink" title="利用できる（未登録の） PackageProvider 一覧"></a>利用できる（未登録の） PackageProvider 一覧</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; Find-PackageProvider</span><br></pre></td></tr></table></figure>
+<h3 id="PackageProvider-登録"><a href="#PackageProvider-登録" class="headerlink" title="PackageProvider 登録"></a>PackageProvider 登録</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; Get-PackageProvider Chocolatey</span><br></pre></td></tr></table></figure>
+<h3 id="登録済み-PackageProvider-一覧"><a href="#登録済み-PackageProvider-一覧" class="headerlink" title="登録済み PackageProvider 一覧"></a>登録済み PackageProvider 一覧</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; Get-PackageProvider</span><br></pre></td></tr></table></figure>
+<h2 id="パッケージ（アプリケーション）-の検索・追加・確認・削除"><a href="#パッケージ（アプリケーション）-の検索・追加・確認・削除" class="headerlink" title="パッケージ（アプリケーション） の検索・追加・確認・削除"></a>パッケージ（アプリケーション） の検索・追加・確認・削除</h2><p>なんとなく <em>nodist</em> で試してみる。</p>
+<h3 id="パッケージの検索"><a href="#パッケージの検索" class="headerlink" title="パッケージの検索"></a>パッケージの検索</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; Find-Package -name nodist</span><br></pre></td></tr></table></figure>
+<h3 id="パッケージのインストール"><a href="#パッケージのインストール" class="headerlink" title="パッケージのインストール"></a>パッケージのインストール</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; Install-Package -name nodist</span><br></pre></td></tr></table></figure>
+<p>アプリケーション付属のインストーラーを裏で実行しているだけっぽい？</p>
+<h3 id="インストール済みパッケージ一覧"><a href="#インストール済みパッケージ一覧" class="headerlink" title="インストール済みパッケージ一覧"></a>インストール済みパッケージ一覧</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; Get-Package</span><br></pre></td></tr></table></figure>
+<h3 id="パッケージのアンインストール"><a href="#パッケージのアンインストール" class="headerlink" title="パッケージのアンインストール"></a>パッケージのアンインストール</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; Uninstall-Package -name nodist</span><br></pre></td></tr></table></figure>
+<p>こちらもどうやらアプリケーション付属のアンインストーラーが起動しているだけっぽい？ので、アプリケーションごとに挙動が違ったりする。</p>
+<p>ちなみにものによってこれだけではアプリケーション本体は消えないものがあるんで、そういったものはこれに加え通常のアンインストール手順で消してあげる必要がある。</p>
+<h2 id="おわりに"><a href="#おわりに" class="headerlink" title="おわりに"></a>おわりに</h2><p>これである程度のアプリケーションを Package Management で管理できるようになりました。</p>
+<p>通常のGUIインストーラーからインストールするときに選べるインストールオプションが、この方法でインストールするとすべてデフォルト設定になるっぽくて、例えば <em>Git for Windows</em> とかは個人的にインストール時の設定をある程度変えたいので、そういうアプリケーションにはちょっと使いづらい感じ。逆にインストールオプションがあんまり無いようなor重要じゃないアプリケーションはこっちのほうが断然楽だと思います。</p>
+<p>まだちょっと触った感じですが、便利は便利だと思うので、なんか「いい感じ」の付き合い方を見つけたいです（windowsのbashはまだしばらく微妙そうだし・・・）。</p>
+<h2 id="参考URL"><a href="#参考URL" class="headerlink" title="参考URL"></a>参考URL</h2><ul>
+<li><p><a href="http://cartman0.hatenablog.com/entry/2016/03/20/233719" target="_blank" rel="noopener">Windows PowerShell でパッケージ管理(Package Management)してみる - はしくれエンジニアもどきのメモ</a></p>
+</li>
+<li><p><a href="http://rcmdnk.github.io/blog/2016/03/11/computer-windows-chocolatey-packagemanagement/" target="_blank" rel="noopener">Windows 10でPackageManagement (OneGet) + Chocolateyでアプリ管理 - rcmdnk’s blog</a></p>
+</li>
+</ul>
+<h2 id="余談"><a href="#余談" class="headerlink" title="余談"></a>余談</h2><p>PowerShellデフォルトの、エラー出力が赤字黒背景なのがなんかもうとにかく苦手で、とりあえずそこの設定の変更だけ調べたのでついでにメモ。</p>
+<p>下記ファイルが <code>.bashrc</code> 的な存在になるっぽいので作成。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%UserProfile%\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1</span><br></pre></td></tr></table></figure>
+<p>そこに下記の内容を記述。</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$host</span>.privatedata.errorbackgroundcolor = <span class="string">"DarkMagenta"</span></span><br><span class="line"><span class="variable">$host</span>.privatedata.errorforegroundcolor = <span class="string">"Yellow"</span></span><br></pre></td></tr></table></figure>
+<p>これで心の平穏は保たれた・・・</p>
+<ul>
+<li><p><a href="https://makandat.wordpress.com/2015/05/31/windows-powershell-%E3%81%A7%E3%82%A8%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E3%81%AE%E8%89%B2%E3%82%92%E5%A4%89%E3%81%88%E3%82%8B%E3%81%AB%E3%81%AF/" target="_blank" rel="noopener">Windows PowerShell でエラーメッセージの色を変えるには</a></p>
+</li>
+<li><p><a href="http://shirokichi2.blog.so-net.ne.jp/2014-03-15" target="_blank" rel="noopener">Windows PowerShell のプロンプトに色を付ける</a></p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+
+<nav id="pagination">
+  
+  
+  <div class="clearfix"></div>
+</nav></div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="widget profile">
+  <h3 class="title">Profile</h3>
+  <div class="entry">
+    <dl class="author">
+      <dt>Author</dt><dd>にしうさぎ (nishi wusagi)</dd>
+    </dl>
+    <p class="author-bio">フロントエンド寄りの web アプリケーションエンジニア</p>
+    <ul class="social-list">
+      
+      
+        <li>
+          <a href="https://github.com/wusagi24" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github fa-2x"></i>
+          </a>
+        </li>
+      
+      
+        <li>
+          <a href="https://www.facebook.com/lapin.wuusan" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook fa-2x"></i>
+          </a>
+        </li>
+      
+      
+        <li>
+          <a href="https://twitter.com/wusagi24" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-twitter fa-2x"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Recent Posts</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2018/01/10/customized-blog-theme/">ブログテーマをいろいろ改変</a>
+      </li>
+    
+      <li>
+        <a href="/2017/11/08/Ruby-on-Rails-dev-env-on-Docker/">Docker による Ruby on Rails の開発環境</a>
+      </li>
+    
+      <li>
+        <a href="/2017/10/09/Github-Pages-を-Hexo-に置き換えてみた/">Github Pages を Hexo に置き換えてみた</a>
+      </li>
+    
+      <li>
+        <a href="/2016/08/22/react-tutorial-by-create-react-app/">CreateReactApp によるReactチュートリアルの写経</a>
+      </li>
+    
+      <li>
+        <a href="/2016/08/06/windows-package-management/">Windwos の PackageManagement を使ってみる</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Categories</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/Hexo/">Hexo</a><small>1</small></li>
+  
+    <li><a href="/categories/React/">React</a><small>1</small></li>
+  
+    <li><a href="/categories/etc/">etc</a><small>1</small></li>
+  
+    <li><a href="/categories/環境構築/">環境構築</a><small>1</small></li>
+  
+    <li><a href="/categories/開発環境/">開発環境</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/Docker/">Docker</a><small>1</small></li>
+  
+    <li><a href="/tags/Github-Pages/">Github Pages</a><small>1</small></li>
+  
+    <li><a href="/tags/Hexo/">Hexo</a><small>2</small></li>
+  
+    <li><a href="/tags/PackageManagement/">PackageManagement</a><small>1</small></li>
+  
+    <li><a href="/tags/PowerShell/">PowerShell</a><small>1</small></li>
+  
+    <li><a href="/tags/Rails/">Rails</a><small>1</small></li>
+  
+    <li><a href="/tags/React/">React</a><small>1</small></li>
+  
+    <li><a href="/tags/Windows/">Windows</a><small>1</small></li>
+  
+    <li><a href="/tags/blog/">blog</a><small>1</small></li>
+  
+    <li><a href="/tags/js/">js</a><small>1</small></li>
+  
+    <li><a href="/tags/写経/">写経</a><small>1</small></li>
+  
+    <li><a href="/tags/開発環境/">開発環境</a><small>2</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2018 にしうさぎ (nishi wusagi)
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>
