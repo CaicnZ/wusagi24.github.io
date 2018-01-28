@@ -1,0 +1,261 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  
+  <title>TypeScript + React-Redux なプロジェクトを作ろうとしてる話 | wusagi24 blog</title>
+  <meta name="author" content="にしうさぎ (nishi wusagi)">
+  
+  <meta name="description" content="https://github.com/wusagi24/agqr-player/tree/d33c50f3f63990506b0d9e36fd62fe6622833e67
+React-Redux 構成の SPA を TypeScript で書いてみたいと思って、とりあえず必要そうなものいろいろ組み合">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="description" content="https://github.com/wusagi24/agqr-player/tree/d33c50f3f63990506b0d9e36fd62fe6622833e67 React-Redux 構成の SPA を TypeScript で書いてみたいと思って、とりあえず必要そうなものいろいろ組み合わせた雛形（？）を作成してみました。 半年後にはもう参考にならないものになってそうだけども… ゴテゴ">
+<meta name="keywords" content="TypeScript,React,Redux,js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TypeScript + React-Redux なプロジェクトを作ろうとしてる話">
+<meta property="og:url" content="https://wusagi24.github.io/2018/01/28/TypeScript-React-Redux-experimental/index.html">
+<meta property="og:site_name" content="wusagi24 blog">
+<meta property="og:description" content="https://github.com/wusagi24/agqr-player/tree/d33c50f3f63990506b0d9e36fd62fe6622833e67 React-Redux 構成の SPA を TypeScript で書いてみたいと思って、とりあえず必要そうなものいろいろ組み合わせた雛形（？）を作成してみました。 半年後にはもう参考にならないものになってそうだけども… ゴテゴ">
+<meta property="og:locale" content="ja">
+<meta property="og:updated_time" content="2018-01-28T06:47:43.631Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="TypeScript + React-Redux なプロジェクトを作ろうとしてる話">
+<meta name="twitter:description" content="https://github.com/wusagi24/agqr-player/tree/d33c50f3f63990506b0d9e36fd62fe6622833e67 React-Redux 構成の SPA を TypeScript で書いてみたいと思って、とりあえず必要そうなものいろいろ組み合わせた雛形（？）を作成してみました。 半年後にはもう参考にならないものになってそうだけども… ゴテゴ">
+<meta name="twitter:creator" content="@wusagi24">
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="wusagi24 blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
+  
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">wusagi24 blog</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2018-01-28T05:35:39.000Z"><a href="/2018/01/28/TypeScript-React-Redux-experimental/">2018-01-28</a></time>
+      
+      
+  
+    <h1 class="title">TypeScript + React-Redux なプロジェクトを作ろうとしてる話</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p><a href="https://github.com/wusagi24/agqr-player/tree/d33c50f3f63990506b0d9e36fd62fe6622833e67" target="_blank" rel="noopener">https://github.com/wusagi24/agqr-player/tree/d33c50f3f63990506b0d9e36fd62fe6622833e67</a></p>
+<p>React-Redux 構成の SPA を TypeScript で書いてみたいと思って、とりあえず必要そうなものいろいろ組み合わせた雛形（？）を作成してみました。</p>
+<p>半年後にはもう参考にならないものになってそうだけども…</p>
+<h2 id="ゴテゴテ"><a href="#ゴテゴテ" class="headerlink" title="ゴテゴテ"></a>ゴテゴテ</h2><p>ただ使ってみたいってだけだったり、雛形の段階では不要だけど後から入れることになると面倒くさいタイプだったりのパッケージを始めから組み込んであるので、雛形の時点でゴテゴテ感が否めません…少なくとも最小構成ではない。</p>
+<p>でもここから、dev 時と prod 時でのビルド処理の振り分けスクリプト書いたり設定ファイル増やしたり、十中八九使うけどまだ入れてないライブラリ足したりで、さらにゴテゴテしていくはずです。</p>
+<p>今に始まったことではないですが、「うーん、なんかなー」って感じ。</p>
+<p>まぁ、しばらくは web のフロントエンドに寄り添いたいと思っているので、そんなもんかなーと思うことにしています。</p>
+<p>あと完全に好みの話ですが、フルスタックなフレームワークよりは、薄いフレームワークやライブラリを積み重ねていくほうがまだ好きなので。</p>
+<h2 id="TypeScript-React-Redux"><a href="#TypeScript-React-Redux" class="headerlink" title="TypeScript + React-Redux"></a>TypeScript + React-Redux</h2><p>TypeScript で React-Redux 構成を作るのは初めてだったんですが、最小構成での話であれば</p>
+<p>[ES next] -&gt; babel -&gt; [JS] の流れが、</p>
+<p>[TypeScript] -&gt; typescript -&gt; [JS] になるだけなので、</p>
+<p>ややこしさは大差ないかなという印象です。</p>
+<p>ただ、（特に Redux 周りの）大小様々なパッケージを追加しつつ実際に作って行く中で、なんやかんや TS ならではの面倒くさいことは出てきそうな気はしています。</p>
+<h2 id="いまのきーもち"><a href="#いまのきーもち" class="headerlink" title="いまのきーもち"></a>いまのきーもち</h2><p>VS Code だと何かと気が利いていて便利そうなのと、知識欲の観点から TS 採用してみましたが、少なくとも “ひとりプロジェクト” だったら ES next な記法を Babel 通して使ったほうが何かと手っ取り早かったり、将来性があったり、不要な地雷が増えなかったりで、いいんじゃないかなと今のところ思ってます。</p>
+<p>一応型がある安心感が分からないわけではないんですが、そもそも JS で独自型ごりごり作っていく設計が個人的にあんまり…<br>出来る限り、プリミティブ型と、浅い構造のオブジェクトと、ピュアな関数でどうにかしたほうが、JS は活き活きする気がしてる（謎スピリチュアル言葉選び</p>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/React/">React</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/TypeScript/">TypeScript</a>, <a href="/tags/React/">React</a>, <a href="/tags/Redux/">Redux</a>, <a href="/tags/js/">js</a>
+  </div>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="widget profile">
+  <h3 class="title">Profile</h3>
+  <div class="entry">
+    <dl class="author">
+      <dt>Author</dt><dd>にしうさぎ (nishi wusagi)</dd>
+    </dl>
+    <p class="author-bio">フロントエンド寄りの web アプリケーションエンジニア</p>
+    <ul class="social-list">
+      
+      
+        <li>
+          <a href="https://github.com/wusagi24" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github fa-2x"></i>
+          </a>
+        </li>
+      
+      
+        <li>
+          <a href="https://www.facebook.com/lapin.wuusan" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook fa-2x"></i>
+          </a>
+        </li>
+      
+      
+        <li>
+          <a href="https://twitter.com/wusagi24" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-twitter fa-2x"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Recent Posts</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2018/01/28/TypeScript-React-Redux-experimental/">TypeScript + React-Redux なプロジェクトを作ろうとしてる話</a>
+      </li>
+    
+      <li>
+        <a href="/2018/01/10/customized-blog-theme/">ブログテーマをいろいろ改変</a>
+      </li>
+    
+      <li>
+        <a href="/2017/11/08/Ruby-on-Rails-dev-env-on-Docker/">Docker による Ruby on Rails の開発環境</a>
+      </li>
+    
+      <li>
+        <a href="/2017/10/09/Github-Pages-を-Hexo-に置き換えてみた/">Github Pages を Hexo に置き換えてみた</a>
+      </li>
+    
+      <li>
+        <a href="/2016/08/22/react-tutorial-by-create-react-app/">CreateReactApp によるReactチュートリアルの写経</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Categories</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/Hexo/">Hexo</a><small>1</small></li>
+  
+    <li><a href="/categories/React/">React</a><small>2</small></li>
+  
+    <li><a href="/categories/etc/">etc</a><small>1</small></li>
+  
+    <li><a href="/categories/環境構築/">環境構築</a><small>1</small></li>
+  
+    <li><a href="/categories/開発環境/">開発環境</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/Docker/">Docker</a><small>1</small></li>
+  
+    <li><a href="/tags/Github-Pages/">Github Pages</a><small>1</small></li>
+  
+    <li><a href="/tags/Hexo/">Hexo</a><small>2</small></li>
+  
+    <li><a href="/tags/PackageManagement/">PackageManagement</a><small>1</small></li>
+  
+    <li><a href="/tags/PowerShell/">PowerShell</a><small>1</small></li>
+  
+    <li><a href="/tags/Rails/">Rails</a><small>1</small></li>
+  
+    <li><a href="/tags/React/">React</a><small>2</small></li>
+  
+    <li><a href="/tags/Redux/">Redux</a><small>1</small></li>
+  
+    <li><a href="/tags/TypeScript/">TypeScript</a><small>1</small></li>
+  
+    <li><a href="/tags/Windows/">Windows</a><small>1</small></li>
+  
+    <li><a href="/tags/blog/">blog</a><small>1</small></li>
+  
+    <li><a href="/tags/js/">js</a><small>2</small></li>
+  
+    <li><a href="/tags/写経/">写経</a><small>1</small></li>
+  
+    <li><a href="/tags/開発環境/">開発環境</a><small>2</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2018 にしうさぎ (nishi wusagi)
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>

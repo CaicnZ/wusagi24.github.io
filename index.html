@@ -55,6 +55,53 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2018-01-28T05:35:39.000Z"><a href="/2018/01/28/TypeScript-React-Redux-experimental/">2018-01-28</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2018/01/28/TypeScript-React-Redux-experimental/">TypeScript + React-Redux なプロジェクトを作ろうとしてる話</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p><a href="https://github.com/wusagi24/agqr-player/tree/d33c50f3f63990506b0d9e36fd62fe6622833e67" target="_blank" rel="noopener">https://github.com/wusagi24/agqr-player/tree/d33c50f3f63990506b0d9e36fd62fe6622833e67</a></p>
+<p>React-Redux 構成の SPA を TypeScript で書いてみたいと思って、とりあえず必要そうなものいろいろ組み合わせた雛形（？）を作成してみました。</p>
+<p>半年後にはもう参考にならないものになってそうだけども…</p>
+<h2 id="ゴテゴテ"><a href="#ゴテゴテ" class="headerlink" title="ゴテゴテ"></a>ゴテゴテ</h2><p>ただ使ってみたいってだけだったり、雛形の段階では不要だけど後から入れることになると面倒くさいタイプだったりのパッケージを始めから組み込んであるので、雛形の時点でゴテゴテ感が否めません…少なくとも最小構成ではない。</p>
+<p>でもここから、dev 時と prod 時でのビルド処理の振り分けスクリプト書いたり設定ファイル増やしたり、十中八九使うけどまだ入れてないライブラリ足したりで、さらにゴテゴテしていくはずです。</p>
+<p>今に始まったことではないですが、「うーん、なんかなー」って感じ。</p>
+<p>まぁ、しばらくは web のフロントエンドに寄り添いたいと思っているので、そんなもんかなーと思うことにしています。</p>
+<p>あと完全に好みの話ですが、フルスタックなフレームワークよりは、薄いフレームワークやライブラリを積み重ねていくほうがまだ好きなので。</p>
+<h2 id="TypeScript-React-Redux"><a href="#TypeScript-React-Redux" class="headerlink" title="TypeScript + React-Redux"></a>TypeScript + React-Redux</h2><p>TypeScript で React-Redux 構成を作るのは初めてだったんですが、最小構成での話であれば</p>
+<p>[ES next] -&gt; babel -&gt; [JS] の流れが、</p>
+<p>[TypeScript] -&gt; typescript -&gt; [JS] になるだけなので、</p>
+<p>ややこしさは大差ないかなという印象です。</p>
+<p>ただ、（特に Redux 周りの）大小様々なパッケージを追加しつつ実際に作って行く中で、なんやかんや TS ならではの面倒くさいことは出てきそうな気はしています。</p>
+<h2 id="いまのきーもち"><a href="#いまのきーもち" class="headerlink" title="いまのきーもち"></a>いまのきーもち</h2><p>VS Code だと何かと気が利いていて便利そうなのと、知識欲の観点から TS 採用してみましたが、少なくとも “ひとりプロジェクト” だったら ES next な記法を Babel 通して使ったほうが何かと手っ取り早かったり、将来性があったり、不要な地雷が増えなかったりで、いいんじゃないかなと今のところ思ってます。</p>
+<p>一応型がある安心感が分からないわけではないんですが、そもそも JS で独自型ごりごり作っていく設計が個人的にあんまり…<br>出来る限り、プリミティブ型と、浅い構造のオブジェクトと、ピュアな関数でどうにかしたほうが、JS は活き活きする気がしてる（謎スピリチュアル言葉選び</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2018-01-10T10:09:00.000Z"><a href="/2018/01/10/customized-blog-theme/">2018-01-10</a></time>
       
       
@@ -380,6 +427,10 @@
   <ul class="entry">
     
       <li>
+        <a href="/2018/01/28/TypeScript-React-Redux-experimental/">TypeScript + React-Redux なプロジェクトを作ろうとしてる話</a>
+      </li>
+    
+      <li>
         <a href="/2018/01/10/customized-blog-theme/">ブログテーマをいろいろ改変</a>
       </li>
     
@@ -395,10 +446,6 @@
         <a href="/2016/08/22/react-tutorial-by-create-react-app/">CreateReactApp によるReactチュートリアルの写経</a>
       </li>
     
-      <li>
-        <a href="/2016/08/06/windows-package-management/">Windwos の PackageManagement を使ってみる</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -410,7 +457,7 @@
   
     <li><a href="/categories/Hexo/">Hexo</a><small>1</small></li>
   
-    <li><a href="/categories/React/">React</a><small>1</small></li>
+    <li><a href="/categories/React/">React</a><small>2</small></li>
   
     <li><a href="/categories/etc/">etc</a><small>1</small></li>
   
@@ -439,13 +486,17 @@
   
     <li><a href="/tags/Rails/">Rails</a><small>1</small></li>
   
-    <li><a href="/tags/React/">React</a><small>1</small></li>
+    <li><a href="/tags/React/">React</a><small>2</small></li>
+  
+    <li><a href="/tags/Redux/">Redux</a><small>1</small></li>
+  
+    <li><a href="/tags/TypeScript/">TypeScript</a><small>1</small></li>
   
     <li><a href="/tags/Windows/">Windows</a><small>1</small></li>
   
     <li><a href="/tags/blog/">blog</a><small>1</small></li>
   
-    <li><a href="/tags/js/">js</a><small>1</small></li>
+    <li><a href="/tags/js/">js</a><small>2</small></li>
   
     <li><a href="/tags/写経/">写経</a><small>1</small></li>
   
